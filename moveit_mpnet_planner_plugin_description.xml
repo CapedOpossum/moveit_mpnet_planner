@@ -1,0 +1,7 @@
+<library path="moveit_mpnet_planner_plugin">
+    <class name="moveit_mpnet_planner/MpNetPlanner" type="moveit_mpnet_planner::MpNetPlannerManager" base_class_type="planning_interface::PlannerManager">
+        <description>Plug-in that integrates MPNet-based planner to MoveIt 2</description>
+    </class>
+</library>
+
+<!-- vim: set ts=4 sw=4 expandtab: -->

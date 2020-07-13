@@ -1,0 +1,15 @@
+{
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.enabled": true,
+  "cSpell.words": [
+    "MPNET",
+    "SRDF",
+    "gzserver",
+    "moveit",
+    "ompl",
+    "rassor",
+    "rclcpp",
+    "urdf"
+  ]
+}
