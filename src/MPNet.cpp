@@ -256,6 +256,11 @@ MPNet::replanPath(
 
     std::vector< ompl::base::State* > new_path;
 
+    std::vector< ompl::base::State* > return_path;
+    if (path.size() < 1)
+    {
+        return return_path;
+    }
     for (size_t i = 0; i < path.size() - 1; i++)
     {
         if (si_->isValid(path[i]))
@@ -265,7 +270,6 @@ MPNet::replanPath(
     }
 
     new_path.push_back(goal);
-    std::vector< ompl::base::State* > return_path;
 
     for (size_t i = 0; i < new_path.size() - 1; i++)
     {
@@ -562,7 +566,7 @@ MPNet::MPNetSolve()
         }
         // we failed, return path with only start state 
         path.clear();
-        path.push_back(start_state);
+        // path.push_back(start_state);
         OMPL_WARN("%s: MPNet failed to produce a plan.", getName().c_str());
         return path; 
     }
